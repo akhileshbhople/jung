@@ -1,5 +1,9 @@
 # Per https://docs.travis-ci.com/user/languages/java
 
+os:
+  - linux
+  - linux-ppc64le
+
 sudo: false
 
 language: java

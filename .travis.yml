@@ -1,9 +1,5 @@
 # Per https://docs.travis-ci.com/user/languages/java
 
-os:
-  - linux
-  - linux-ppc64le
-
 sudo: false
 
 language: java
@@ -15,6 +11,11 @@ dist: trusty
 jdk:
   - oraclejdk8
   - openjdk8
+
+matrix:
+  include:
+  - os: linux-ppc64le
+    jdk: openjdk8
 
 install:
   - mvn -v
